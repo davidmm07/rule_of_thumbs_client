@@ -1,0 +1,41 @@
+.header {
+  background: url(../../assets/img/Layer3.jpg) no-repeat center;
+  max-width: 100%;
+  height: auto;
+  background-size: cover;
+  min-height: 100vh;
+  nav a {
+    color:white
+  }
+  
+}
+
+.header .navbar {
+    font-family: 'Lato', sans-serif;
+    border-top: 4px double transparentize($color: #4d4c4c, $amount: 0.9);
+    background-color: transparentize($color: #7a7877, $amount: 0.9) !important;
+  }
+
+
+
+@media (min-width: 768px){
+
+  .main-ruling {
+    padding-top: 6rem;
+    padding-left: 7rem;
+    max-width: 620px;
+    min-width: 220px;
+  }
+  .header {
+    background: url(../../assets/img/Layer3.jpg) no-repeat;
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+    min-height: 100vh;
+    nav a {
+      color:white
+    }
+    
+  }
+
+}
