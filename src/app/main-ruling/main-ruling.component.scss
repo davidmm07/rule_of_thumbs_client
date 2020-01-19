@@ -1,0 +1,32 @@
+igx-card {
+  font-family: "Lato", sans-serif;
+  border-top: 4px double transparentize($color: #4d4c4c, $amount: 0.9);
+  background-color: transparentize($color: #7a7877, $amount: 0.3) !important;
+  .content-main-ruling {
+    color: white;
+  }
+  .progress {
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    height: 100%;
+    background-color: transparent;
+  }
+  .igx-card-actions {
+    padding: 0em;
+    height: 4em;
+
+  }
+  .progress-bar {
+    border: 0em;
+    margin: 0em;
+  }
+  .thumbs-up {
+    align-items: center;
+    background-color: transparentize($color: #2dbbb4, $amount: 0.4) !important;
+}
+.thumbs-down {
+    align-items: center;
+    background-color: transparentize($color: #fcb230, $amount: 0.4) !important;
+  }
+}

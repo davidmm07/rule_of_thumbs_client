@@ -1,0 +1,157 @@
+@media (min-width: 768px) {
+  .card-component{
+    margin-bottom: 30px;
+  }
+  igx-card {
+    width: 500px;
+    height: 500px;
+    font-family: "Lato", sans-serif;
+    background-color: transparentize($color: #7a7877, $amount: 1) !important;
+    border: 0em;
+
+    .content-main-ruling {
+      color: white;
+    }
+    .progress {
+      padding-left: 0px;
+      padding-bottom: 0px;
+      padding-right: 0px;
+      height: 100%;
+      background-color: transparent;
+    }
+    .igx-card-actions {
+      padding: 0em;
+      height: 4em;
+    }
+    .progress-bar {
+      border: 0em;
+      margin: 0em;
+    }
+    .thumbs-up {
+      align-items: flex-start;
+      background-color: transparentize(
+        $color: #2dbbb4,
+        $amount: 0.4
+      ) !important;
+    }
+    .thumbs-down {
+      align-items: flex-end;
+      background-color: transparentize(
+        $color: #fcb230,
+        $amount: 0.4
+      ) !important;
+    }
+
+    .selected-icon-up {
+      &:focus {
+        background-color: #2dbbb4 !important;
+        border-color: #ffffff !important;
+        color: #eee;
+        border-style: solid;
+        border-width: 0.2em;
+      }
+      igx-icon {
+        max-height: auto;
+      }
+      margin-right: 1em;
+      border: 0em;
+      padding: 0.5em 0.5em;
+      border-color: #2dbbb4 !important;
+      background-color: #2dbbb4 !important;
+    }
+    .selected-icon-down {
+      &:focus {
+        background-color: #fcb230 !important;
+        border-color: #ffffff !important;
+        color: #eee;
+        border-style: solid;
+        border-width: 0.2em;
+      }
+      igx-icon {
+        max-height: auto;
+      }
+      margin-right: 1em;
+      border: 0em;
+      padding: 0.5em 0.5em;
+      background-color: #fcb230 !important;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .card-component{
+    margin-bottom: 20px;
+  }
+  igx-card {
+    width: 100%;
+    font-family: "Lato", sans-serif;
+    background-color: transparentize($color: #7a7877, $amount: 1) !important;
+    border: 0em;
+    margin-bottom: 20px;
+    .content-main-ruling {
+      color: white;
+    }
+    .progress {
+      padding-left: 0px;
+      padding-bottom: 0px;
+      padding-right: 0px;
+      height: 100%;
+      background-color: transparent;
+    }
+    .igx-card-actions {
+      padding: 0em;
+      height: 4em;
+    }
+    .progress-bar {
+      border: 0em;
+      margin: 0em;
+    }
+    .thumbs-up {
+      align-items: center;
+      background-color: transparentize(
+        $color: #2dbbb4,
+        $amount: 0.4
+      ) !important;
+    }
+    .thumbs-down {
+      align-items: center;
+      background-color: transparentize(
+        $color: #fcb230,
+        $amount: 0.4
+      ) !important;
+    }
+    .selected-icon-up {
+      &:focus {
+        background-color: #2dbbb4 !important;
+        border-color: #ffffff !important;
+        color: #eee;
+        border-style: solid;
+        border-width: 0.2em;
+      }
+      igx-icon {
+        max-height: auto;
+      }
+      margin-right: 1em;
+      border: 0em;
+      padding: 0.5em 0.5em;
+      border-color: #2dbbb4 !important;
+      background-color: #2dbbb4 !important;
+    }
+    .selected-icon-down {
+      &:focus {
+        background-color: #fcb230 !important;
+        border-color: #ffffff !important;
+        color: #eee;
+        border-style: solid;
+        border-width: 0.2em;
+      }
+      igx-icon {
+        max-height: auto;
+      }
+      margin-right: 1em;
+      border: 0em;
+      padding: 0.5em 0.5em;
+      background-color: #fcb230 !important;
+    }
+  }
+}
