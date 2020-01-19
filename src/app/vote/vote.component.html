@@ -1,0 +1,136 @@
+<div class="component-vote">
+  <div class="row">
+    <div
+      class="card-component col-md-6"
+      *ngFor="let vote of votes | async; let i = index"
+    >
+      <igx-card
+        [style.background]="'url(' + vote.trialinfo.ImageUrl + ')'"
+        [style.background-size]="auto"
+      >
+        <igx-card-header class="content-main-ruling"> </igx-card-header>
+
+        <igx-card-content class="content-main-ruling">
+          <div class="row">
+            <div>
+              <br />
+              <br />
+              <button
+                (click)="preVote(vote, up)"
+                class="selected-icon-up"
+                *ngIf="vote.uppercent > vote.downpercent"
+              >
+                <igx-icon fontSet="filter-icons" name="thumbsup"></igx-icon>
+              </button>
+              <button
+                (click)="preVote(vote, down)"
+                class="selected-icon-down"
+                *ngIf="vote.downpercent > vote.uppercent"
+              >
+                <igx-icon fontSet="filter-icons" name="thumbsdown"></igx-icon>
+              </button>
+            </div>
+          </div>
+          <div>
+            <h3>{{ vote.trialinfo.Name }}</h3>
+          </div>
+          <p>
+            He’s talking tough on clergy sexual abuse, but is he just another
+            papal pervert protector? (thumbs down) or a true pedophile punishing
+            pontiff? (thumbs up)
+          </p>
+          <div *ngIf="!vote.alreadyVote" class="row">
+            <div class="col-2">
+              <button (click)="preVote(vote, up)" class="selected-icon-up">
+                <igx-icon fontSet="filter-icons" name="thumbsup"></igx-icon>
+              </button>
+            </div>
+            <div class="col-2">
+              <button (click)="preVote(vote, down)" class="selected-icon-down">
+                <igx-icon fontSet="filter-icons" name="thumbsdown"></igx-icon>
+              </button>
+            </div>
+
+            <div class="col-4">
+              <button
+                *ngIf="vote.preSelected"
+                (click)="addVote(vote)"
+                igxButton="raised"
+                igxButtonColor="white"
+                igxButtonBackground="#0000"
+                igxRipple="black"
+                igxRippleCentered="true"
+              >
+                Vote now
+              </button>
+            </div>
+          </div>
+          <div *ngIf="vote.alreadyVote" class="row">
+            <div class="col-4">
+              <p>Thank you for voting !</p>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-4">
+              <button
+                (click)="activePreChoice(vote)"
+                igxButton="raised"
+                igxButtonColor="white"
+                igxButtonBackground="#0000"
+                igxRipple="black"
+                igxRippleCentered="true"
+              >
+                Vote again
+              </button>
+            </div>
+          </div>
+        </igx-card-content>
+
+        <igx-card-actions>
+          <div class="progress col-12">
+            <button
+              igxRipple="white"
+              igxRippleCentered="true"
+              class="progress-bar thumbs-up"
+              role="progressbar"
+              [style.width.%]="vote.uppercent"
+              aria-valuenow="50"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="row">
+                <div class="col-2">
+                  <igx-icon fontSet="filter-icons" name="thumbsup"></igx-icon>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-2">
+                  <h6>{{ vote.uppercent ? vote.uppercent : 0 }} %</h6>
+                </div>
+              </div>
+            </button>
+            <button
+              igxRipple="black"
+              igxRippleCentered="true"
+              class="progress-bar thumbs-down"
+              role="progressbar"
+              [style.width.%]="vote.downpercent"
+              aria-valuenow="50"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="row">
+                <div class="col-3">
+                  <h6>{{ vote.downpercent ? vote.downpercent : 0 }} %</h6>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-3">
+                  <igx-icon fontSet="filter-icons" name="thumbsdown"></igx-icon>
+                </div>
+              </div>
+            </button>
+          </div>
+        </igx-card-actions>
+      </igx-card>
+      <br />
+    </div>
+  </div>
+</div>
