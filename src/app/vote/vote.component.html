@@ -69,8 +69,9 @@
             <div class="col-4">
               <p>Thank you for voting !</p>
             </div>
-            <div class="w-100"></div>
             <div class="col-4">
+              <br/>
+              <br/>
               <button
                 (click)="activePreChoice(vote)"
                 igxButton="raised"
@@ -98,11 +99,11 @@
               aria-valuemax="100"
             >
               <div class="row">
-                <div class="col-2">
+                <div class="col-3">
                   <igx-icon fontSet="filter-icons" name="thumbsup"></igx-icon>
                 </div>
                 <div class="col-1"></div>
-                <div class="col-2">
+                <div class="col-3">
                   <h6>{{ vote.uppercent ? vote.uppercent : 0 }} %</h6>
                 </div>
               </div>
@@ -118,11 +119,11 @@
               aria-valuemax="100"
             >
               <div class="row">
-                <div class="col-3">
+                <div class="col-4">
                   <h6>{{ vote.downpercent ? vote.downpercent : 0 }} %</h6>
                 </div>
                 <div class="col-1"></div>
-                <div class="col-3">
+                <div class="col-4">
                   <igx-icon fontSet="filter-icons" name="thumbsdown"></igx-icon>
                 </div>
               </div>
