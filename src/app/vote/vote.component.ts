@@ -82,6 +82,12 @@ export class VoteComponent implements OnInit {
 
 
   }
+  adjustSize(percent){
+    if (percent == 50){
+      return 50;
+    }
+    return percent <50?percent<=25?30:40:percent>=75?70:60;
+  }
 
   activePreChoice(vote){
     vote.alreadyVote = false;
