@@ -93,7 +93,7 @@
               igxRippleCentered="true"
               class="progress-bar thumbs-up"
               role="progressbar"
-              [style.width.%]="vote.uppercent"
+              [style.width.%]="adjustSize(vote.uppercent)"
               aria-valuenow="50"
               aria-valuemin="0"
               aria-valuemax="100"
@@ -102,7 +102,6 @@
                 <div class="col-3">
                   <igx-icon fontSet="filter-icons" name="thumbsup"></igx-icon>
                 </div>
-                <div class="col-1"></div>
                 <div class="col-3">
                   <h6>{{ vote.uppercent ? vote.uppercent : 0 }} %</h6>
                 </div>
@@ -113,17 +112,18 @@
               igxRippleCentered="true"
               class="progress-bar thumbs-down"
               role="progressbar"
-              [style.width.%]="vote.downpercent"
+              [style.width.%]="adjustSize(vote.downpercent)"
               aria-valuenow="50"
               aria-valuemin="0"
               aria-valuemax="100"
             >
               <div class="row">
-                <div class="col-4">
+                <div class="col-1"></div>
+                <div class="col-3">
                   <h6>{{ vote.downpercent ? vote.downpercent : 0 }} %</h6>
                 </div>
                 <div class="col-1"></div>
-                <div class="col-4">
+                <div class="col-3">
                   <igx-icon fontSet="filter-icons" name="thumbsdown"></igx-icon>
                 </div>
               </div>
